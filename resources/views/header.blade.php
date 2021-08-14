@@ -29,7 +29,7 @@ $total=0;
           <div class="form-group">
             <input type="text" name="query" class="form-control search-form" placeholder="Search">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/cartlist">Cart Item ({{$total}})</a></li>
