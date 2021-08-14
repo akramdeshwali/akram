@@ -1,10 +1,10 @@
 <?php 
 use App\Http\COntrollers\ProductController;
 $total=0;
-// if(Session::has('user'))
-// {
-//   $total=ProductController::cartItem();
-// }
+if(Session::has('user'))
+{
+  $total=ProductController::cartItem();
+}
 ?>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -32,8 +32,9 @@ $total=0;
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/cartlist">Cart Item ({{$total}})</a></li>
+          
           @if(Session::has('user'))
+          <li><a href="/cartlist">Cart Item ( {{$total}} )</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{Session::get('user')['name']}}
             <span class="caret"></span></a>
@@ -42,9 +43,8 @@ $total=0;
             </ul>
           </li>
           @else
-          <li><a href="/login">Login</a></li>
+          {{-- <li><a href="/login">Login</a></li> --}}
           <li><a href="/register">Register</a></li>
-
           @endif
         </ul>
       </div><!-- /.navbar-collapse -->
