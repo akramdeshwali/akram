@@ -55,11 +55,15 @@
     padding-bottom: 20px;
     }
     .image{
-        margin-top: -5px;
+        margin-top: -8px;
+        margin-left: 10px
     }
     .add-product{
         margin-top: 40px
         
+    }
+    .search-form{
+        margin-left: 60%
     }
 </style>
 </html>

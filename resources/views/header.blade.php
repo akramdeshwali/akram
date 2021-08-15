@@ -21,20 +21,22 @@ if(Session::has('user'))
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-         
-          @if (Session::has('user'))
-          <li class=""><a href="/myorder">Orders</a></li> 
-          @endif 
-                         
-        </ul>
-        <form action="/search" class="navbar-form navbar-left">
+        
+        <form action="/search" class="navbar-form navbar-left" class=" search-form">
           <div class="form-group">
-            <input type="text" name="query" class="form-control search-form" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" name="query" class="form-control " placeholder="Search">
           </div>
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
+         
+            @if (Session::has('user'))
+            <li class=""><a href="/myorder">Orders</a></li> 
+            @endif 
+                           
+          </ul>
 
            
           
